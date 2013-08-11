@@ -26,6 +26,14 @@ describe('my app', function() {
         toMatch(/partial for view 1/);
     });
 
+    it('should save input in repeater', function() {
+        input('todos').enter('1');
+        /*expect(repeater('.phones li').count()).toBe(8);*/
+        /*pause();*/
+        //expect(scope.todo).toBe('1');
+        expect(repeater('.todo-list li').count()).toBe(1);
+    });
+
   });
 
 
@@ -42,4 +50,5 @@ describe('my app', function() {
     });
 
   });
+
 });
