@@ -1,6 +1,8 @@
-<div ng-controller="MyCtrl1">
-    <input name="todo.text" ng-model="todo.text">
-    <button ng-click="addTodo()"> Save </button>
+<div ng-controller="MyCtrl1" >
+    <form class="form-inline">
+        <input type="text" placeholder="Type something…" name="todo.text" ng-model="todo.text">
+        <button class="btn" ng-click="addTodo()"> Save </button>
+    </form>
     <ul class="todo-list">
         <li ng-repeat="todo in todos">
         <span>{{ todo }}</span>

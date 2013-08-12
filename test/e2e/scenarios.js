@@ -36,6 +36,13 @@ describe('my app', function() {
         expect(element('.todo-list li span:eq(1)').text()).toBe('2');
     });
 
+    it('should be persistent', function() {
+        input('todo.text').enter('1');
+        element(':button').click();
+        browser().navigateTo('#/view2');
+        browser().navigateTo('#/view1');
+        expect(element('.todo-list li span:first').text()).toBe('1');
+    });
   });
 
 
