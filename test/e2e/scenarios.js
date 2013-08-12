@@ -27,11 +27,13 @@ describe('my app', function() {
     });
 
     it('should save input in repeater', function() {
-        input('todos').enter('1');
-        /*expect(repeater('.phones li').count()).toBe(8);*/
-        /*pause();*/
-        //expect(scope.todo).toBe('1');
+        input('todo.text').enter('1');
+        element(':button').click();
         expect(repeater('.todo-list li').count()).toBe(1);
+        expect(element('.todo-list li span:first').text()).toBe('1');
+        input('todo.text').enter('2');
+        element(':button').click();
+        expect(element('.todo-list li span:eq(1)').text()).toBe('2');
     });
 
   });

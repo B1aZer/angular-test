@@ -1,8 +1,10 @@
-<input ng-model="todos"/>
-<button> Save </button>
- <ul class="todo-list">
-<li ng-repeat="todo in todos">
-<span>{{ todo }}</span>
-</li>
-</ul>
-<p>This is the partial for view 1.</p>
+<div ng-controller="MyCtrl1">
+    <input name="todo.text" ng-model="todo.text">
+    <button ng-click="addTodo()"> Save </button>
+    <ul class="todo-list">
+        <li ng-repeat="todo in todos">
+        <span>{{ todo }}</span>
+        </li>
+    </ul>
+    <p>This is the partial for view 1.</p>
+</div>

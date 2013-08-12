@@ -3,9 +3,15 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function($scope) {
+    controller('MyCtrl1', ['$scope', function($scope) {
+        $scope.todos = [];
 
-  }])
-  .controller('MyCtrl2', [function() {
+        $scope.addTodo = function () {
+            $scope.todos.push($scope.todo.text);
+            $scope.todo.text = '';
+        };
 
-  }]);
+    }])
+    .controller('MyCtrl2', [function() {
+
+}]);
