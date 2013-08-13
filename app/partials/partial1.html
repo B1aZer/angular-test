@@ -3,10 +3,9 @@
         <input type="text" placeholder="Type something…" name="todo.text" ng-model="todo.text">
         <button class="btn" ng-click="addTodo()"> Save </button>
     </form>
-    <ul class="todo-list">
-        <li ng-repeat="todo in todos">
-        <span>{{ todo }}</span>
+    <ul class="todo-list inline">
+        <li ng-repeat="todo in todos" class="ideas">
+        <h4>{{ todo }}</h4> <div class="todo-controls"> <a class="btn btn-mini" href="#/view2/{{ createSlug(todo) }}" >View details</a> <a class="btn btn-mini" ng-click="removeTodo()">X</a> </div>
         </li>
     </ul>
-    <p>This is the partial for view 1.</p>
 </div>
